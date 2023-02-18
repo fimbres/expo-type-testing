@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSelector } from 'react-redux'
 
 import { Colors, Styles } from '../constants'
-import { PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader } from '../components'
+import { AppButton, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader } from '../components'
 import { RootStackParamList } from '../navigation/types'
 import { useGetProductsQuery } from '../stores/apiSlice'
 import { selectTotalPoints, selectAllProducts, selectNotRedemptionProducts, selectRedemptionProducts } from '../stores/productsSlice'
@@ -15,6 +15,7 @@ const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ na
   const allProducts = useSelector(selectAllProducts);
   const redemptionProducts = useSelector(selectRedemptionProducts);
   const notRedemptionProducts = useSelector(selectNotRedemptionProducts);
+  const [filter, setFilter] = useState<"all" | "redemption" | "no-redemption">("all");
 
   return (
     <SafeAreaContainer>
@@ -24,7 +25,18 @@ const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ na
           <Text style={styles.subTitle}>Tus Puntos</Text>
           <PointsBadge points={totalPoints}/>
           <Text style={styles.subTitle}>Tus Movimientos</Text>
-          <ProductsList products={allProducts} onPress={(productId) => navigation.navigate("Product", { productId })} />
+          <ProductsList products={filter === "all" ? allProducts : filter === "redemption" ? redemptionProducts : notRedemptionProducts} onPress={(productId) => navigation.navigate("Product", { productId })} />
+          <View style={styles.buttonsContainer}>
+            {filter === "all" ? (
+              <>
+                <AppButton title="Ganados" onPress={() => setFilter("no-redemption")} />
+                <View style={{ marginHorizontal: 6 }} />
+                <AppButton title="Canjeados" onPress={() => setFilter("redemption")} />
+              </>
+            ) : (
+              <AppButton title="Todos" size='lg' onPress={() => setFilter("all")} />
+            )}
+          </View>
         </View>
       </>
     </SafeAreaContainer>
@@ -43,5 +55,9 @@ const styles = StyleSheet.create({
       color: Colors.gray,
       textTransform: 'uppercase',
       marginVertical: 20,
+    },
+    buttonsContainer: {
+      flexDirection: 'row',
+      marginVertical: 40,
     }
 });
