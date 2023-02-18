@@ -1,4 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
+import moment from 'moment';
 
 import { apiSlice } from "./apiSlice";
 import { IProduct } from "./types";
@@ -7,9 +8,13 @@ const initialState: IProduct[] = [];
 
 const selectUsersResult = apiSlice.endpoints.getProducts.select({});
 
+const sortProducts = (first: IProduct, second: IProduct) => {
+    return moment(first.createdAt).valueOf() - moment(second.createdAt).valueOf();
+};
+
 export const selectAllProducts = createSelector(
     selectUsersResult,
-    productsResult => productsResult.data ?? initialState,
+    productsResult => productsResult.data ? [...productsResult.data].sort(sortProducts) : initialState,
 );
 
 export const selectTotalPoints = createSelector(
