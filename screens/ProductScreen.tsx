@@ -8,8 +8,8 @@ import { RootStackParamList } from '../navigation/types'
 const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> = () => {
   return (
     <View style={styles.container}>
-      <Text style={Styles.textHeadlineHero}>HomeScreen</Text>
-      <Text style={Styles.textHeadlineLarge}>HomeScreen</Text>
+      <Text style={Styles.textTitleGiant}>HomeScreen</Text>
+      <Text style={Styles.textCaptionExtraSmall}>HomeScreen</Text>
     </View>
   )
 }
