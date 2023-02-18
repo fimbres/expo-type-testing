@@ -40,7 +40,7 @@ const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> =
                             secondaryTextStyle={Styles.textTitleExtraLarge}
                         />
                     </ScrollView>
-                    <ScreenFooter>
+                    <ScreenFooter style={{ paddingHorizontal: 20 }}>
                         <AppButton title='Aceptar' size='lg' onPress={() => navigation.goBack()} />
                     </ScreenFooter>
                 </>
