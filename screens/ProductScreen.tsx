@@ -4,7 +4,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSelector } from 'react-redux'
 
 import { Colors, Styles } from '../constants'
-import { IProduct } from '../types'
+import { IProduct, RootState } from '../types'
 import { RootStackParamList } from '../navigation/types'
 import { AppButton, SafeAreaContainer, ScreenHeader } from '../components'
 import { selectProductById } from '../slices/productsSlice'
@@ -12,7 +12,7 @@ import { getDateLabel, getFormattedPoints } from '../utils/formats';
 
 const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> = ({ navigation, route }) => {
     const { productId } = route.params;
-    const product = useSelector<any, IProduct | undefined>(state => selectProductById(state, productId));
+    const product = useSelector<RootState, IProduct | undefined>(state => selectProductById(state, productId));
     const { image, product: name, points, createdAt } = product!;
 
     if(!product){
