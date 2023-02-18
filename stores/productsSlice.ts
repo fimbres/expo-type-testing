@@ -12,6 +12,18 @@ export const selectAllProducts = createSelector(
     productsResult => productsResult.data ?? initialState,
 );
 
+export const selectTotalPoints = createSelector(
+    selectAllProducts,
+    (products) => products.reduce((sum, product) => {
+        if(product.is_redemption){
+            return sum -= product.points;
+        }
+        else{
+            return sum += product.points;
+        }
+    }, 0)
+);
+
 export const selectProductById = createSelector(
     selectAllProducts,
     (_: IProduct[], productId: number) => productId,
