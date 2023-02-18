@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Pressable, StyleSheet, Text } from 'react-native'
+
 import { Colors, Styles } from '../constants';
 
 interface AppButtonProps {
