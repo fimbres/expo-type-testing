@@ -5,7 +5,7 @@ import Numeral from "numeral";
 import moment from 'moment';
 import 'moment/locale/es';
 
-import { IProduct } from '../../stores/types'
+import { IProduct } from '../../types'
 import { Colors, Styles } from '../../constants';
 
 interface ProductCellProps {

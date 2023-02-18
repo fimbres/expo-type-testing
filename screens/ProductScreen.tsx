@@ -10,7 +10,7 @@ import { RootStackParamList } from '../navigation/types'
 import { AppButton, SafeAreaContainer, ScreenHeader } from '../components'
 import { useSelector } from 'react-redux'
 import { selectProductById } from '../stores/productsSlice'
-import { IProduct } from '../stores/types'
+import { IProduct } from '../types'
 
 const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> = ({ navigation, route }) => {
     const { productId } = route.params;

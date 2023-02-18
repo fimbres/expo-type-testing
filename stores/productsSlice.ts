@@ -2,7 +2,7 @@ import { createSelector } from "@reduxjs/toolkit";
 import moment from 'moment';
 
 import { apiSlice } from "./apiSlice";
-import { IProduct } from "./types";
+import { IProduct } from "../types";
 
 const initialState: IProduct[] = [];
 
