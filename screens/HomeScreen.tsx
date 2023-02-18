@@ -8,8 +8,8 @@ import { Colors, Styles } from '../constants'
 import { ButtonsContainer, Loader, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader } from '../components'
 import { Filter } from '../types';
 import { RootStackParamList } from '../navigation/types'
-import { useGetProductsQuery } from '../stores/apiSlice'
-import { selectTotalPoints, selectAllProducts, selectNotRedemptionProducts, selectRedemptionProducts } from '../stores/productsSlice'
+import { useGetProductsQuery } from '../slices/apiSlice'
+import { selectTotalPoints, selectAllProducts, selectNotRedemptionProducts, selectRedemptionProducts } from '../slices/productsSlice'
 
 const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ navigation }) => {
   const { isError, isLoading, error } = useGetProductsQuery({});

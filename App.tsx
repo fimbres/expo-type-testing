@@ -6,7 +6,7 @@ import { RootSiblingParent } from 'react-native-root-siblings';
 
 import useCachedResources from './hooks/useCachedResources';
 import Navigation from './navigation';
-import { apiSlice } from './stores/apiSlice';
+import { apiSlice } from './slices/apiSlice';
 import { Loader } from './components';
 
 export default function App() {
