@@ -17,7 +17,6 @@ export default function useCachedResources() {
           ...FontAwesome.font,
           'avenir-black': require('../assets/fonts/AvenirLTStd-Black.otf'),
           'avenir-book': require('../assets/fonts/AvenirLTStd-Book.otf'),
-          'avenir-roman': require('../assets/fonts/AvenirLTStd-Roman.otf'),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
