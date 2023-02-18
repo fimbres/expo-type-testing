@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
-import { ScrollView, StyleSheet, View } from 'react-native'
+import { ScrollView, StyleSheet } from 'react-native'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSelector } from 'react-redux'
 
 import { Colors, Styles } from '../constants'
 import { IProduct, RootState } from '../types'
 import { RootStackParamList } from '../navigation/types'
-import { AppButton, ProductImageBadge, SafeAreaContainer, ScreenHeader, InformationLabel } from '../components'
+import { AppButton, ProductImageBadge, SafeAreaContainer, InformationLabel, ScreenHeader, ScreenFooter } from '../components'
 import { selectProductById } from '../slices/productsSlice'
 import { getDateLabel, getFormattedPoints } from '../utils/formats';
 
@@ -40,9 +40,9 @@ const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> =
                             secondaryTextStyle={Styles.textTitleExtraLarge}
                         />
                     </ScrollView>
-                    <View style={styles.buttonContainer}>
+                    <ScreenFooter>
                         <AppButton title='Aceptar' size='lg' onPress={() => navigation.goBack()} />
-                    </View>
+                    </ScreenFooter>
                 </>
             </SafeAreaContainer>
         </>
