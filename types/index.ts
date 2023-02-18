@@ -11,3 +11,5 @@ export interface IProduct {
     reason?: string,
     verification_code?: string,
 }
+
+export type Filter = "all" | "redemption" | "no-redemption";
