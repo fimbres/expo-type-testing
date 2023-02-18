@@ -1,5 +1,6 @@
 const black = "#020202";
 const white = "#FFFFFF";
+const bone = "#F8F8F8";
 const gray = "#9B9898";
 const blue = "#334FFA";
 const red = "#FF0000";
@@ -9,6 +10,7 @@ const violet = "#CFD6FF";
 export const Colors = {
   black,
   white,
+  bone,
   gray,
   blue,
   red,
