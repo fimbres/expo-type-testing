@@ -7,9 +7,9 @@ import { RootStackParamList } from '../navigation/types';
 const NotFoundScreen: FC<NativeStackScreenProps<RootStackParamList, "NotFound">> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>This product doesn't exist.</Text>
+      <Text style={styles.title}>El producto seleccionado no existe.</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.link}>
-        <Text style={styles.linkText}>Go to home screen!</Text>
+        <Text style={styles.linkText}>Volver a Inicio</Text>
       </TouchableOpacity>
     </View>
   );
