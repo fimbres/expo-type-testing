@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { FlatList, StyleSheet , View} from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 
 import { IProduct } from '../../types';
 import { ProductCell } from './ProductCell';
