@@ -1,10 +1,11 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSelector } from 'react-redux'
+import Toast from 'react-native-root-toast';
 
 import { Colors, Styles } from '../constants'
-import { AppButton, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader } from '../components'
+import { AppButton, Loader, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader } from '../components'
 import { RootStackParamList } from '../navigation/types'
 import { useGetProductsQuery } from '../stores/apiSlice'
 import { selectTotalPoints, selectAllProducts, selectNotRedemptionProducts, selectRedemptionProducts } from '../stores/productsSlice'
@@ -17,15 +18,43 @@ const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ na
   const notRedemptionProducts = useSelector(selectNotRedemptionProducts);
   const [filter, setFilter] = useState<"all" | "redemption" | "no-redemption">("all");
 
+  useEffect(() => {
+    if(isError){
+      showToast();
+      console.error("Error: ", error);
+    }
+  }, [isError]);
+
+  const showToast = () => {
+    Toast.show('Error cargando los productos', {
+      duration: Toast.durations.LONG,
+      containerStyle: {
+        marginTop: 40,
+        backgroundColor: Colors.red,
+      },
+      textColor: Colors.white,
+      position: 1,
+    });
+  }
+  
+  const getProducts = () => {
+    switch(filter){
+      case "all": return allProducts;
+      case "redemption": return redemptionProducts;
+      case "no-redemption": return notRedemptionProducts;
+    }
+  }
+
   return (
     <SafeAreaContainer>
       <>
+        {isLoading && <Loader />}
         <ScreenHeader title='Bienvenido de vuelta!' subtitle='Ruben Rodriguez' />
         <View style={styles.container}>
           <Text style={styles.subTitle}>Tus Puntos</Text>
           <PointsBadge points={totalPoints}/>
           <Text style={styles.subTitle}>Tus Movimientos</Text>
-          <ProductsList products={filter === "all" ? allProducts : filter === "redemption" ? redemptionProducts : notRedemptionProducts} onPress={(productId) => navigation.navigate("Product", { productId })} />
+          <ProductsList products={getProducts()} onPress={(productId) => navigation.navigate("Product", { productId })} />
           <View style={styles.buttonsContainer}>
             {filter === "all" ? (
               <>
