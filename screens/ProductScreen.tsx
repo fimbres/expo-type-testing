@@ -1,16 +1,14 @@
 import React, { FC } from 'react'
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
-import Numeral from "numeral";
-import moment from 'moment';
-import 'moment/locale/es';
+import { useSelector } from 'react-redux'
 
 import { Colors, Styles } from '../constants'
+import { IProduct } from '../types'
 import { RootStackParamList } from '../navigation/types'
 import { AppButton, SafeAreaContainer, ScreenHeader } from '../components'
-import { useSelector } from 'react-redux'
-import { selectProductById } from '../stores/productsSlice'
-import { IProduct } from '../types'
+import { selectProductById } from '../slices/productsSlice'
+import { getDateLabel, getFormattedPoints } from '../utils/formats';
 
 const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> = ({ navigation, route }) => {
     const { productId } = route.params;
@@ -19,11 +17,6 @@ const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> =
 
     if(!product){
         navigation.navigate("NotFound");
-    }
-
-    const getDateLabel = () => {
-        const momentDate = moment(createdAt);
-        return `Comprado el ${momentDate.format("d")} de ${momentDate.format("MMMM, YYYY")}`
     }
 
     return (
@@ -37,9 +30,9 @@ const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> =
                         <Image source={{ uri: image }} style={styles.image} />
                     </View>
                     <Text style={[styles.subtitle, { marginTop: 32, marginBottom: 19}]}>Detalles del producto:</Text>
-                    <Text style={Styles.textTitleRegular}>{getDateLabel()}</Text>
+                    <Text style={Styles.textTitleRegular}>Comprado el {getDateLabel(createdAt)}</Text>
                     <Text style={[styles.subtitle, { marginTop: 20, marginBottom: 32}]}>Con esta compra acumulaste:</Text>
-                    <Text style={Styles.textTitleExtraLarge}>{Numeral(points).format("0,0")} puntos</Text>
+                    <Text style={Styles.textTitleExtraLarge}>{getFormattedPoints(points)} puntos</Text>
                 </ScrollView>
                 <View style={styles.buttonContainer}>
                     <AppButton title='Aceptar' size='lg' onPress={() => navigation.goBack()} />

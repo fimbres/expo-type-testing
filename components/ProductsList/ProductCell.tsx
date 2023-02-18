@@ -1,12 +1,10 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import { Entypo } from '@expo/vector-icons';
-import Numeral from "numeral";
-import moment from 'moment';
-import 'moment/locale/es';
 
 import { IProduct } from '../../types'
 import { Colors, Styles } from '../../constants';
+import { getDateLabel, getFormattedPoints } from '../../utils/formats';
 
 interface ProductCellProps {
     product: IProduct;
@@ -16,24 +14,19 @@ interface ProductCellProps {
 export const ProductCell: FC<ProductCellProps> = ({ product, onPress }) => {
     const { image, product: name, createdAt, points, is_redemption } = product;
 
-    const getDateLabel = () => {
-        const momentDate = moment(createdAt);
-        return `${momentDate.format("d")} de ${momentDate.format("MMMM, YYYY")}`
-    }
-
     return (
         <Pressable style={styles.cell} onPress={onPress}>
             <View style={styles.container}>
                 <Image source={{ uri: image }} style={styles.image}/>
                 <View>
                     <Text style={styles.primaryText}>{name}</Text>
-                    <Text style={Styles.textCaptionExtraSmall}>{getDateLabel()}</Text>
+                    <Text style={Styles.textCaptionExtraSmall}>{getDateLabel(createdAt)}</Text>
                 </View>
             </View>
             <View style={styles.container}>
                 <Text style={styles.pointsText}>
                     <Text style={{ color: is_redemption ? Colors.red : Colors.green }}>{is_redemption ? "-" : "+"}</Text>
-                    {Numeral(points).format("0,0")}
+                    {getFormattedPoints(points)}
                 </Text>
                 <Entypo name="triangle-right" size={14} color="black" />
             </View>

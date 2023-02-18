@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import Numeral from "numeral";
 
 import { Colors, Styles } from '../constants';
+import { getFormattedPoints } from '../utils/formats';
 
 interface PointsBadgeProps {
     points: number;
@@ -12,7 +12,7 @@ export const PointsBadge: FC<PointsBadgeProps> = ({ points }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Diciembre</Text>
-      <Text style={styles.pointsText}>{Numeral(points).format("0,0.00")} pts</Text>
+      <Text style={styles.pointsText}>{getFormattedPoints(points, "0,0.00")} pts</Text>
     </View>
   )
 }
