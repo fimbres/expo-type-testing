@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import Toast from 'react-native-root-toast';
 
 import { Colors, Styles } from '../constants'
-import { ButtonsContainer, Loader, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader } from '../components'
+import { FilterButtons, Loader, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader, ScreenFooter } from '../components'
 import { Filter } from '../types';
 import { RootStackParamList } from '../navigation/types'
 import { useGetProductsQuery } from '../slices/apiSlice'
@@ -56,7 +56,9 @@ const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ na
           <PointsBadge points={totalPoints}/>
           <Text style={styles.subTitle}>Tus Movimientos</Text>
           <ProductsList products={getProducts()} onPress={(productId) => navigation.navigate("Product", { productId })} />
-          <ButtonsContainer filter={filter} setFilter={setFilter} />
+          <ScreenFooter>
+            <FilterButtons filter={filter} setFilter={setFilter} />
+          </ScreenFooter>
         </View>
       </>
     </SafeAreaContainer>
