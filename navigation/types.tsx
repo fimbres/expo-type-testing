@@ -14,7 +14,7 @@ declare global {
 export type RootStackParamList = {
   Home: undefined;
   Product: {
-    productId: string;
+    productId: number;
   }
   NotFound: undefined;
 };
