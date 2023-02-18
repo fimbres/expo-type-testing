@@ -1,39 +1,46 @@
 import { FC } from 'react';
-import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import { RootStackParamList } from '../navigation/types';
+import { AppButton, SafeAreaContainer, ScreenFooter, ScreenHeader } from '../components';
+import { Colors } from '../constants';
 
 const NotFoundScreen: FC<NativeStackScreenProps<RootStackParamList, "NotFound">> = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>El producto seleccionado no existe.</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.link}>
-        <Text style={styles.linkText}>Volver a Inicio</Text>
-      </TouchableOpacity>
-    </View>
+    <>
+      <SafeAreaContainer style={styles.statusBar} />
+      <SafeAreaContainer style={{ paddingTop: 0 }}>
+        <View style={styles.container}>
+          <ScreenHeader title='Lo Sentimos!' subtitle='El producto que seleccionaste no existe' style={styles.header} />
+          <ScreenFooter style={styles.footer}>
+            <AppButton title='Volver a Inicio' size='lg' onPress={() => navigation.navigate("Home")} />
+          </ScreenFooter>
+        </View>
+      </SafeAreaContainer>
+    </>
   );
 }
 
 export default NotFoundScreen;
 
 const styles = StyleSheet.create({
+  statusBar: {
+    flex: 0,
+    backgroundColor: Colors.white,
+  },
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+  },
+  header: {
+    paddingTop: 66,
+    paddingBottom: 24,
+    borderBottomWidth: 1,
+    borderColor: Colors.black,
+    backgroundColor: Colors.white,
+  },
+  footer: {
     padding: 20,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-  linkText: {
-    fontSize: 14,
-    color: '#2e78b7',
   },
 });
