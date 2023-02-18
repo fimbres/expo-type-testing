@@ -9,7 +9,7 @@ const initialState: IProduct[] = [];
 const selectUsersResult = apiSlice.endpoints.getProducts.select({});
 
 const sortProducts = (first: IProduct, second: IProduct) => {
-    return moment(first.createdAt).valueOf() - moment(second.createdAt).valueOf();
+    return moment(second.createdAt).valueOf() - moment(first.createdAt).valueOf();
 };
 
 export const selectAllProducts = createSelector(
