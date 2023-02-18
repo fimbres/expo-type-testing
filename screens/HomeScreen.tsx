@@ -5,7 +5,8 @@ import { useSelector } from 'react-redux'
 import Toast from 'react-native-root-toast';
 
 import { Colors, Styles } from '../constants'
-import { AppButton, Loader, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader } from '../components'
+import { ButtonsContainer, Loader, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader } from '../components'
+import { Filter } from '../types';
 import { RootStackParamList } from '../navigation/types'
 import { useGetProductsQuery } from '../stores/apiSlice'
 import { selectTotalPoints, selectAllProducts, selectNotRedemptionProducts, selectRedemptionProducts } from '../stores/productsSlice'
@@ -16,7 +17,7 @@ const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ na
   const allProducts = useSelector(selectAllProducts);
   const redemptionProducts = useSelector(selectRedemptionProducts);
   const notRedemptionProducts = useSelector(selectNotRedemptionProducts);
-  const [filter, setFilter] = useState<"all" | "redemption" | "no-redemption">("all");
+  const [filter, setFilter] = useState<Filter>("all");
 
   useEffect(() => {
     if(isError){
@@ -55,17 +56,7 @@ const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ na
           <PointsBadge points={totalPoints}/>
           <Text style={styles.subTitle}>Tus Movimientos</Text>
           <ProductsList products={getProducts()} onPress={(productId) => navigation.navigate("Product", { productId })} />
-          <View style={styles.buttonsContainer}>
-            {filter === "all" ? (
-              <>
-                <AppButton title="Ganados" onPress={() => setFilter("no-redemption")} />
-                <View style={{ marginHorizontal: 6 }} />
-                <AppButton title="Canjeados" onPress={() => setFilter("redemption")} />
-              </>
-            ) : (
-              <AppButton title="Todos" size='lg' onPress={() => setFilter("all")} />
-            )}
-          </View>
+          <ButtonsContainer filter={filter} setFilter={setFilter} />
         </View>
       </>
     </SafeAreaContainer>
@@ -85,8 +76,4 @@ const styles = StyleSheet.create({
       textTransform: 'uppercase',
       marginVertical: 20,
     },
-    buttonsContainer: {
-      flexDirection: 'row',
-      marginVertical: 40,
-    }
 });
