@@ -12,7 +12,7 @@ export const PointsBadge: FC<PointsBadgeProps> = ({ points }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Diciembre</Text>
-      <Text style={styles.pointsText}>{Numeral(points).format("$0,0.00")} pts</Text>
+      <Text style={styles.pointsText}>{Numeral(points).format("0,0.00")} pts</Text>
     </View>
   )
 }

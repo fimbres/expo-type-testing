@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import { Entypo } from '@expo/vector-icons';
+import Numeral from "numeral";
 import moment from 'moment';
 import 'moment/locale/es';
 
@@ -32,7 +33,7 @@ export const ProductCell: FC<ProductCellProps> = ({ product, onPress }) => {
             <View style={styles.container}>
                 <Text style={styles.pointsText}>
                     <Text style={{ color: is_redemption ? Colors.red : Colors.green }}>{is_redemption ? "-" : "+"}</Text>
-                    {points}
+                    {Numeral(points).format("0,0")}
                 </Text>
                 <Entypo name="triangle-right" size={14} color="black" />
             </View>
