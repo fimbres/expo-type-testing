@@ -1,6 +1,7 @@
-import React, { FC } from 'react'
-import { FlatList, StyleSheet , View} from 'react-native'
-import { IProduct } from '../../stores/types'
+import React, { FC } from 'react';
+import { FlatList, StyleSheet , View} from 'react-native';
+
+import { IProduct } from '../../stores/types';
 import { ProductCell } from './ProductCell';
 import { Colors } from '../../constants';
 
