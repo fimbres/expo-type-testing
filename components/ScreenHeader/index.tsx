@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, View, ViewStyle } from 'react-native'
 
-import { Styles } from '../constants';
+import { Styles } from '../../constants';
 
 interface ScreenHeaderProps {
     title: string;

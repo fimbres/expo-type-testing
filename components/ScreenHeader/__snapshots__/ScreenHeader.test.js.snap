@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScreenHeader /> render correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 20,
+        "paddingTop": 24,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#020202",
+        "fontFamily": "avenir-black",
+        "fontSize": 20,
+        "fontWeight": "800",
+        "lineHeight": 27.32,
+      }
+    }
+  >
+    This is a title
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#020202",
+        "fontFamily": "avenir-book",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "lineHeight": 21.86,
+      }
+    }
+  >
+    This is a subtitle
+  </Text>
+</View>
+`;
