@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
-// import { Entypo } from '@expo/vector-icons';
 
 import { IProduct } from '../../types'
 import { Colors, Styles } from '../../constants';
@@ -13,6 +12,13 @@ interface ProductCellProps {
 
 export const ProductCell: FC<ProductCellProps> = ({ product, onPress }) => {
     const { image, product: name, createdAt, points, is_redemption } = product;
+
+    const renderIcon = () => (
+        <View>
+            <View style={styles.blackTriangle}/>
+            <View style={[styles.blackTriangle, styles.whiteTriangle]}/>
+        </View>
+    );
 
     return (
         <Pressable style={styles.cell} onPress={onPress}>
@@ -28,7 +34,7 @@ export const ProductCell: FC<ProductCellProps> = ({ product, onPress }) => {
                     <Text style={{ color: is_redemption ? Colors.red : Colors.green }}>{is_redemption ? "-" : "+"}</Text>
                     {getFormattedPoints(points)}
                 </Text>
-                {/* <Entypo name="triangle-right" size={14} color="black" /> */}
+                {renderIcon()}
             </View>
         </Pressable>
     )
@@ -59,5 +65,29 @@ const styles = StyleSheet.create({
     pointsText: {
         ...Styles.textTitleRegular,
         marginRight: 10
+    },
+    blackTriangle: {
+        width: 0,
+        height: 0,
+        borderLeftWidth: 6,
+        borderRightWidth: 6,
+        borderBottomWidth: 12,
+        borderStyle: 'solid',
+        backgroundColor: 'transparent',
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent',
+        borderBottomColor: Colors.black,
+        transform: [
+            { rotate: '90deg' },
+        ],
+    },
+    whiteTriangle: {
+        borderLeftWidth: 3,
+        borderRightWidth: 3,
+        borderBottomWidth: 7,
+        position: 'absolute',
+        left: -0.5,
+        top: 2.3,
+        borderBottomColor: Colors.white,
     }
 })

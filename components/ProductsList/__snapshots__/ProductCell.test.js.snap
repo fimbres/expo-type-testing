@@ -108,6 +108,61 @@ exports[`<ProductCell /> renders correctly 1`] = `
       </Text>
       69,814
     </Text>
+    <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#020202",
+            "borderBottomWidth": 12,
+            "borderLeftColor": "transparent",
+            "borderLeftWidth": 6,
+            "borderRightColor": "transparent",
+            "borderRightWidth": 6,
+            "borderStyle": "solid",
+            "height": 0,
+            "transform": Array [
+              Object {
+                "rotate": "90deg",
+              },
+            ],
+            "width": 0,
+          }
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#020202",
+              "borderBottomWidth": 12,
+              "borderLeftColor": "transparent",
+              "borderLeftWidth": 6,
+              "borderRightColor": "transparent",
+              "borderRightWidth": 6,
+              "borderStyle": "solid",
+              "height": 0,
+              "transform": Array [
+                Object {
+                  "rotate": "90deg",
+                },
+              ],
+              "width": 0,
+            },
+            Object {
+              "borderBottomColor": "#FFFFFF",
+              "borderBottomWidth": 7,
+              "borderLeftWidth": 3,
+              "borderRightWidth": 3,
+              "left": -0.5,
+              "position": "absolute",
+              "top": 2.3,
+            },
+          ]
+        }
+      />
+    </View>
   </View>
 </View>
 `;
