@@ -14,6 +14,7 @@ interface ProductsListProps {
 export const ProductsList: FC<ProductsListProps> = ({ products, onPress }) => {
   return (
     <FlatList
+      testID='products-list'
       style={styles.list}
       showsVerticalScrollIndicator={false}
       data={products}
@@ -21,7 +22,7 @@ export const ProductsList: FC<ProductsListProps> = ({ products, onPress }) => {
       renderItem={({ item, index }) => <ProductCell key={index} product={item} onPress={() => onPress(item.id)} />}
       ListFooterComponent={() => <View style={{ marginTop: 33 }}/>}
       ListEmptyComponent={() => (
-        <View style={styles.emptyState}>
+        <View style={styles.emptyState} testID='products-list-empty-state'>
           <Image source={EmptyInvitesImg} style={styles.image} />
           <Text style={styles.primaryText}>No hay movimientos registrados</Text>
           <Text style={styles.secondaryText}>Realiza una compra y vuelve más tarde</Text>
