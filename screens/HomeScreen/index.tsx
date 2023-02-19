@@ -2,22 +2,22 @@ import React, { FC, useEffect, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSelector } from 'react-redux'
-import Toast from 'react-native-root-toast';
+import Toast from 'react-native-root-toast'
 
-import { Colors, Styles } from '../constants'
-import { FilterButtons, Loader, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader, ScreenFooter } from '../components'
-import { Filter } from '../types';
-import { RootStackParamList } from '../navigation/types'
-import { useGetProductsQuery } from '../slices/apiSlice'
-import { selectTotalPoints, selectAllProducts, selectNotRedemptionProducts, selectRedemptionProducts } from '../slices/productsSlice'
+import { Colors, Styles } from '../../constants'
+import { FilterButtons, Loader, PointsBadge, ProductsList, SafeAreaContainer, ScreenHeader, ScreenFooter } from '../../components'
+import { Filter } from '../../types';
+import { RootStackParamList } from '../../navigation/types'
+import { useGetProductsQuery } from '../../slices/apiSlice'
+import { selectTotalPoints, selectAllProducts, selectNotRedemptionProducts, selectRedemptionProducts } from '../../slices/productsSlice'
 
-const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ navigation }) => {
+const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ navigation, route }) => {
   const { isError, isLoading, error } = useGetProductsQuery({});
   const totalPoints = useSelector(selectTotalPoints);
   const allProducts = useSelector(selectAllProducts);
   const redemptionProducts = useSelector(selectRedemptionProducts);
   const notRedemptionProducts = useSelector(selectNotRedemptionProducts);
-  const [filter, setFilter] = useState<Filter>("all");
+  const [filter, setFilter] = useState<Filter>(route.params?.initialFilter || "all");
 
   useEffect(() => {
     if(isError){
