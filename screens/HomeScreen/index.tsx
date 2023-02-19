@@ -55,7 +55,7 @@ const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> = ({ na
           <Text style={styles.subTitle}>Tus Puntos</Text>
           <PointsBadge points={totalPoints}/>
           <Text style={styles.subTitle}>Tus Movimientos</Text>
-          <ProductsList products={getProducts()} onPress={(productId) => navigation.navigate("Product", { productId })} />
+          <ProductsList products={getProducts()} onPress={product => navigation.navigate("Product", { product })} />
           <ScreenFooter>
             <FilterButtons filter={filter} setFilter={setFilter} />
           </ScreenFooter>

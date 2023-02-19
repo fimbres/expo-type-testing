@@ -8,7 +8,7 @@ import EmptyInvitesImg from "../../assets/images/empty-products.png";
 
 interface ProductsListProps {
     products: IProduct[];
-    onPress: (id: number) => void;
+    onPress: (id: IProduct) => void;
 }
 
 export const ProductsList: FC<ProductsListProps> = ({ products, onPress }) => {
@@ -19,7 +19,7 @@ export const ProductsList: FC<ProductsListProps> = ({ products, onPress }) => {
       showsVerticalScrollIndicator={false}
       data={products}
       ItemSeparatorComponent={() => <View style={{ marginVertical: 4 }} />}
-      renderItem={({ item, index }) => <ProductCell key={index} product={item} onPress={() => onPress(item.id)} />}
+      renderItem={({ item, index }) => <ProductCell key={index} product={item} onPress={() => onPress(item)} />}
       ListFooterComponent={() => <View style={{ marginTop: 33 }}/>}
       ListEmptyComponent={() => (
         <View style={styles.emptyState} testID='products-list-empty-state'>
