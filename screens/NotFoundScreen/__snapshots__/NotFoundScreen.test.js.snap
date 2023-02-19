@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFoundScreen /> renders correctly 1`] = `
+Array [
+  <RCTSafeAreaView
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "flex": 1,
+          "paddingTop": 0,
+        },
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "flex": 0,
+        },
+      ]
+    }
+  />,
+  <RCTSafeAreaView
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "flex": 1,
+          "paddingTop": 0,
+        },
+        Object {
+          "paddingTop": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "paddingHorizontal": 20,
+              "paddingTop": 24,
+            },
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderBottomWidth": 1,
+              "borderColor": "#020202",
+              "paddingBottom": 24,
+              "paddingTop": 66,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#020202",
+              "fontFamily": "avenir-black",
+              "fontSize": 20,
+              "fontWeight": "800",
+              "lineHeight": 27.32,
+            }
+          }
+        >
+          Lo Sentimos!
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#020202",
+              "fontFamily": "avenir-book",
+              "fontSize": 16,
+              "fontWeight": "400",
+              "lineHeight": 21.86,
+            }
+          }
+        >
+          El producto que seleccionaste no existe
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "marginVertical": 40,
+            },
+            Object {
+              "padding": 20,
+            },
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#334FFA",
+                "borderRadius": 10,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "center",
+              },
+              Object {
+                "paddingVertical": 14,
+              },
+              false,
+            ]
+          }
+          testID="app-button"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#020202",
+                  "fontFamily": "avenir-black",
+                  "fontSize": 16,
+                  "fontWeight": "800",
+                  "lineHeight": 21.86,
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
+            }
+          >
+            Volver a Inicio
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTSafeAreaView>,
+]
+`;

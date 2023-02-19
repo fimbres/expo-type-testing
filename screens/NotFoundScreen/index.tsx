@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { RootStackParamList } from '../navigation/types';
-import { AppButton, SafeAreaContainer, ScreenFooter, ScreenHeader } from '../components';
-import { Colors } from '../constants';
+import { RootStackParamList } from '../../navigation/types';
+import { AppButton, SafeAreaContainer, ScreenFooter, ScreenHeader } from '../../components';
+import { Colors } from '../../constants';
 
 const NotFoundScreen: FC<NativeStackScreenProps<RootStackParamList, "NotFound">> = ({ navigation }) => {
   return (
