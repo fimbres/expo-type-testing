@@ -14,26 +14,24 @@ const testProducts = [
     }
 ];
 
+let tree;
+
 describe('<ProductList />', () => {
-    it('has 1 child', () => {
-        const tree = renderer
+    beforeEach(() => {
+        tree = renderer
             .create(
                 <ProductsList
                     product={testProducts}
                     onPress={(id) => console.log("onPress", id)}
                 />
             ).toJSON();
+    })
+
+    it('has 1 child', () => {
         expect(tree.children.length).toBe(1);
     });
 
     it('renders correctly', () => {
-        const tree = renderer
-            .create(
-                <ProductsList
-                    product={testProducts}
-                    onPress={(id) => console.log("onPress", id)}
-                />
-            ).toJSON();
         expect(tree).toMatchSnapshot();
     });
 });

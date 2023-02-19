@@ -12,26 +12,24 @@ const testProduct = {
     product: "Rustic Rubber Bacon",
 };
 
+let tree;
+
 describe('<ProductCell />', () => {
-    it('has 2 child', () => {
-        const tree = renderer
+    beforeEach(() => {
+        tree = renderer
             .create(
                 <ProductCell
                     product={testProduct}
                     onPress={() => console.log("onPress")}
                 />
             ).toJSON();
+    });
+
+    it('has 2 child', () => {
         expect(tree.children.length).toBe(2);
     });
 
     it('renders correctly', () => {
-        const tree = renderer
-            .create(
-                <ProductCell
-                    product={testProduct}
-                    onPress={() => console.log("onPress")}
-                />
-            ).toJSON();
         expect(tree).toMatchSnapshot();
     });
 });
