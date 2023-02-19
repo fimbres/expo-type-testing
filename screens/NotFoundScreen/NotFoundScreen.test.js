@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, screen } from '@testing-library/react-native';
+import { render, screen, fireEvent } from '@testing-library/react-native';
 
 import NotFoundScreen from '.';
 
@@ -17,6 +17,24 @@ describe('<NotFoundScreen />', () => {
         expect(firstText).toBeDefined();
         expect(secondText).toBeDefined();
         expect(thirdText).toBeDefined();
+    });
+
+    it('press button', () => {
+        const navigation = {
+            navigate: () => {}
+        };
+
+        spyOn(navigation, "navigate");
+
+        const { getByTestId } = render(
+            <NotFoundScreen navigation={navigation} />
+        );
+
+        const button = getByTestId('app-button');
+
+        fireEvent.press(button);
+
+        expect(navigation.navigate).toHaveBeenCalledWith("Home", { initialFilter: 'all' });
     });
 
     it('renders correctly', () => {

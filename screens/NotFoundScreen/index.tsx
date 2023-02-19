@@ -14,7 +14,7 @@ const NotFoundScreen: FC<NativeStackScreenProps<RootStackParamList, "NotFound">>
         <View style={styles.container}>
           <ScreenHeader title='Lo Sentimos!' subtitle='El producto que seleccionaste no existe' style={styles.header} />
           <ScreenFooter style={styles.footer}>
-            <AppButton title='Volver a Inicio' size='lg' onPress={() => navigation.navigate("Home")} />
+            <AppButton title='Volver a Inicio' size='lg' onPress={() => navigation.navigate("Home", { initialFilter: 'all' })} />
           </ScreenFooter>
         </View>
       </SafeAreaContainer>
