@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductScreen /> renders correctly 1`] = `
+Array [
+  <RCTSafeAreaView
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "flex": 1,
+          "paddingTop": 0,
+        },
+        Object {
+          "backgroundColor": "#CFD6FF",
+          "flex": 0,
+        },
+      ]
+    }
+  />,
+  <RCTSafeAreaView
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "flex": 1,
+          "paddingTop": 0,
+        },
+        Object {
+          "paddingTop": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "paddingHorizontal": 20,
+            "paddingTop": 24,
+          },
+          Object {
+            "backgroundColor": "#CFD6FF",
+            "paddingBottom": 24,
+            "paddingTop": 66,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#020202",
+            "fontFamily": "avenir-black",
+            "fontSize": 24,
+            "fontWeight": "800",
+            "lineHeight": 24,
+          }
+        }
+      >
+        Rustic Rubber Bacon
+      </Text>
+    </View>
+    <RCTScrollView
+      style={
+        Object {
+          "flex": 1,
+          "paddingHorizontal": 20,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "aspectRatio": 1,
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 10,
+              "elevation": 3,
+              "justifyContent": "center",
+              "marginTop": 19,
+              "shadowColor": "#020202",
+              "shadowOffset": Object {
+                "height": 6,
+                "width": 2,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 8,
+              "width": "100%",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://loremflickr.com/640/480/people",
+              }
+            }
+            style={
+              Object {
+                "height": 200,
+                "width": 200,
+              }
+            }
+            testID="product-image"
+          />
+        </View>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#9B9898",
+                "fontFamily": "avenir-black",
+                "fontSize": 14,
+                "fontWeight": "800",
+                "lineHeight": 19.12,
+              },
+              Object {
+                "marginBottom": 19,
+                "marginTop": 32,
+              },
+            ]
+          }
+        >
+          Detalles del producto:
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#020202",
+              "fontFamily": "avenir-black",
+              "fontSize": 16,
+              "fontWeight": "800",
+              "lineHeight": 21.86,
+            }
+          }
+        >
+          Comprado el 4 de diciembre, 2022
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#9B9898",
+                "fontFamily": "avenir-black",
+                "fontSize": 14,
+                "fontWeight": "800",
+                "lineHeight": 19.12,
+              },
+              Object {
+                "marginBottom": 32,
+                "marginTop": 20,
+              },
+            ]
+          }
+        >
+          Con esta compra acumulaste:
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#020202",
+              "fontFamily": "avenir-black",
+              "fontSize": 24,
+              "fontWeight": "800",
+              "lineHeight": 24,
+            }
+          }
+        >
+          69,814 puntos
+        </Text>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "marginVertical": 40,
+          },
+          Object {
+            "paddingHorizontal": 20,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#334FFA",
+              "borderRadius": 10,
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            },
+            Object {
+              "paddingVertical": 14,
+            },
+            false,
+          ]
+        }
+        testID="app-button"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#020202",
+                "fontFamily": "avenir-black",
+                "fontSize": 16,
+                "fontWeight": "800",
+                "lineHeight": 21.86,
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          Aceptar
+        </Text>
+      </View>
+    </View>
+  </RCTSafeAreaView>,
+]
+`;
