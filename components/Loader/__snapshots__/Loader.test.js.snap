@@ -15,6 +15,7 @@ exports[`<Loader /> have 1 children 1`] = `
       "zIndex": 5,
     }
   }
+  testID="loader"
 >
   <ActivityIndicator
     color="#CFD6FF"
@@ -38,6 +39,7 @@ exports[`<Loader /> render correctly 1`] = `
       "zIndex": 5,
     }
   }
+  testID="loader"
 >
   <ActivityIndicator
     color="#CFD6FF"

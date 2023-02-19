@@ -5,7 +5,7 @@ import { Colors } from '../../constants'
 
 export const Loader: FC = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID='loader'>
       <ActivityIndicator size="large" color={Colors.violet} />
     </View>
   )
