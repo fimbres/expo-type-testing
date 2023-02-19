@@ -8,8 +8,10 @@ import { AppButton, ProductImageBadge, SafeAreaContainer, InformationLabel, Scre
 import { getDateLabel, getFormattedPoints } from '../../utils/formats';
 
 const ProductScreen: FC<NativeStackScreenProps<RootStackParamList, "Product">> = ({ navigation, route }) => {
+    if(!route.params?.product) navigation.navigate("NotFound");
+
     const { product } = route.params;
-    const { image, product: name, points, createdAt } = product;
+    const { image, product: name, points, createdAt } = product!;
 
     return (
         <>
