@@ -1,3 +1,5 @@
+import 'cross-fetch/polyfill';
+import 'abortcontroller-polyfill/dist/abortcontroller-polyfill-only';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { IProduct } from '../types';
