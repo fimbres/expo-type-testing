@@ -4,6 +4,7 @@
  */
 
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Filter } from '../types';
 
 declare global {
   namespace ReactNavigation {
@@ -12,7 +13,9 @@ declare global {
 }
 
 export type RootStackParamList = {
-  Home: undefined;
+  Home: {
+    initialFilter?: Filter;
+  };
   Product: {
     productId: number;
   }
