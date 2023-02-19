@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductCell /> renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginBottom": 8,
+      "paddingHorizontal": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://loremflickr.com/640/480/people",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 10,
+          "height": 55,
+          "marginRight": 11,
+          "width": 55,
+        }
+      }
+    />
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#020202",
+            "fontFamily": "avenir-black",
+            "fontSize": 14,
+            "fontWeight": "800",
+            "lineHeight": 19.12,
+            "marginBottom": 7,
+          }
+        }
+      >
+        Rustic Rubber Bacon
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#020202",
+            "fontFamily": "avenir-book",
+            "fontSize": 12,
+            "fontWeight": "400",
+            "lineHeight": 16.39,
+          }
+        }
+      >
+        4 de diciembre, 2022
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#020202",
+          "fontFamily": "avenir-black",
+          "fontSize": 16,
+          "fontWeight": "800",
+          "lineHeight": 21.86,
+          "marginRight": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FF0000",
+          }
+        }
+      >
+        -
+      </Text>
+      69,814
+    </Text>
+    <Text />
+  </View>
+</View>
+`;

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductList /> renders correctly 1`] = `
+<RCTScrollView
+  ItemSeparatorComponent={[Function]}
+  ListEmptyComponent={[Function]}
+  ListFooterComponent={[Function]}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 16,
+      "flex": 1,
+      "paddingVertical": 23,
+      "width": "100%",
+    }
+  }
+  viewabilityConfigCallbackPairs={Array []}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginTop": 25,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 150,
+            "marginBottom": 24,
+            "resizeMode": "cover",
+            "width": 190,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "#020202",
+            "fontFamily": "avenir-black",
+            "fontSize": 16,
+            "fontWeight": "800",
+            "lineHeight": 21.86,
+          }
+        }
+      >
+        No hay movimientos registrados
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#9B9898",
+            "fontFamily": "avenir-book",
+            "fontSize": 16,
+            "fontWeight": "400",
+            "lineHeight": 21.86,
+          }
+        }
+      >
+        Realiza una compra y vuelve más tarde
+      </Text>
+    </View>
+    <View
+      onLayout={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "marginTop": 33,
+          }
+        }
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;
