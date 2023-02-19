@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-import { Colors, Styles } from '../constants';
-import { getFormattedPoints } from '../utils/formats';
+import { Colors, Styles } from '../../constants';
+import { getFormattedPoints } from '../../utils/formats';
 
 interface PointsBadgeProps {
-    points: number;
+  points: number;
 }
 
 export const PointsBadge: FC<PointsBadgeProps> = ({ points }) => {
