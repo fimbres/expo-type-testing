@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { StyleSheet, Text, TextStyle } from 'react-native';
 
-import { Colors, Styles } from '../constants';
+import { Colors, Styles } from '../../constants';
 
 interface InformationLabelProps {
     primaryText: string;

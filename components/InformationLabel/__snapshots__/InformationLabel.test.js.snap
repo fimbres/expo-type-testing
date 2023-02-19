@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InformationLabel /> render correctly 1`] = `
+Array [
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#9B9898",
+          "fontFamily": "avenir-black",
+          "fontSize": 14,
+          "fontWeight": "800",
+          "lineHeight": 19.12,
+        },
+        Object {},
+      ]
+    }
+  >
+    This is a test
+  </Text>,
+  <Text
+    style={Object {}}
+  >
+    And should pass
+  </Text>,
+]
+`;
