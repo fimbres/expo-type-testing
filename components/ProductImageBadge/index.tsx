@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { StyleSheet, Image, View } from 'react-native'
 
-import { Colors } from '../constants'
+import { Colors } from '../../constants'
 
 interface ProductImageBadgeProps {
     productImageUri: string;
@@ -10,7 +10,7 @@ interface ProductImageBadgeProps {
 export const ProductImageBadge: FC<ProductImageBadgeProps> = ({ productImageUri }) => {
   return (
     <View style={styles.imageContainer}>
-        <Image source={{ uri: productImageUri }} style={styles.image} />
+        <Image source={{ uri: productImageUri }} style={styles.image} testID='product-image' />
     </View>
   )
 }

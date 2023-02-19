@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PointsBadge /> render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "aspectRatio": 1,
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 10,
+      "elevation": 3,
+      "justifyContent": "center",
+      "marginTop": 19,
+      "shadowColor": "#020202",
+      "shadowOffset": Object {
+        "height": 6,
+        "width": 2,
+      },
+      "shadowOpacity": 0.2,
+      "shadowRadius": 8,
+      "width": "100%",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://loremflickr.com/640/480/people",
+      }
+    }
+    style={
+      Object {
+        "height": 200,
+        "width": 200,
+      }
+    }
+    testID="product-image"
+  />
+</View>
+`;
