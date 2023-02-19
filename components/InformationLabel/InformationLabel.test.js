@@ -26,11 +26,11 @@ describe('<InformationLabel />', () => {
         const tree = renderer
             .create(
                 <InformationLabel
-                primaryText='This is a test'
-                secondaryText='And should pass'
-                primaryTextStyle={{}}
-                secondaryTextStyle={{}}
-            />
+                    primaryText='This is a test'
+                    secondaryText='And should pass'
+                    primaryTextStyle={{}}
+                    secondaryTextStyle={{}}
+                />
             ).toJSON();
         expect(tree).toMatchSnapshot();
     });

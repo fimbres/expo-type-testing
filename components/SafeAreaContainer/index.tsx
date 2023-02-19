@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react";
 import { SafeAreaView, StyleSheet, StyleProp, ViewStyle, Platform } from "react-native";
 import Constants from "expo-constants";
 
-import { Colors } from "../constants";
+import { Colors } from "../../constants";
 
 interface SafeAreaContainerProps {
   style?: StyleProp<ViewStyle>;
