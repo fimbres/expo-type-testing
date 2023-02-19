@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react-native';
 
 import { ProductCell } from './ProductCell';
 
@@ -12,24 +13,33 @@ const testProduct = {
     product: "Rustic Rubber Bacon",
 };
 
-let tree;
-
 describe('<ProductCell />', () => {
-    beforeEach(() => {
-        tree = renderer
+    it('render items correctly', () => {
+        render(
+            <ProductCell
+                product={testProduct}
+                onPress={() => console.log("onPress")}
+            />
+        );
+
+        const productName = screen.getByText('Rustic Rubber Bacon');
+        const dateLabel = screen.getByText('4 de diciembre, 2022');
+        const pointsText = screen.getByText('-69,814');
+
+        expect(productName).toBeDefined();
+        expect(dateLabel).toBeDefined();
+        expect(pointsText).toBeDefined();
+    });
+
+    it('renders correctly', () => {
+        const tree = renderer
             .create(
                 <ProductCell
                     product={testProduct}
                     onPress={() => console.log("onPress")}
                 />
             ).toJSON();
-    });
-
-    it('has 2 child', () => {
         expect(tree.children.length).toBe(2);
-    });
-
-    it('renders correctly', () => {
         expect(tree).toMatchSnapshot();
     });
 });

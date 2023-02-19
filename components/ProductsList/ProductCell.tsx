@@ -21,7 +21,7 @@ export const ProductCell: FC<ProductCellProps> = ({ product, onPress }) => {
     );
 
     return (
-        <Pressable style={styles.cell} onPress={onPress}>
+        <Pressable style={styles.cell} onPress={onPress} testID='product-cell'>
             <View style={styles.container}>
                 <Image source={{ uri: image }} style={styles.image}/>
                 <View>

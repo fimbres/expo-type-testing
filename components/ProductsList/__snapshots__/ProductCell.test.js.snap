@@ -23,6 +23,7 @@ exports[`<ProductCell /> renders correctly 1`] = `
       "width": "100%",
     }
   }
+  testID="product-cell"
 >
   <View
     style={
