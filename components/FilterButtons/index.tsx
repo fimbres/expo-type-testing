@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { View } from 'react-native'
 
-import { Filter } from '../types';
-import { AppButton } from './AppButton'
+import { Filter } from '../../types';
+import { AppButton } from '../AppButton'
 
 interface FilterButtonsProps {
     filter: Filter;
