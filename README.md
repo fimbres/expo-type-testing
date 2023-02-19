@@ -15,9 +15,9 @@ Mobile app developed with Expo and React Native for products display.
 **Screenshots Android**
 
 <p align="center">
-    <img src="./assets/screenshots/android1.jpeg" alt="The app is working" width="160" style="vertical-align:middle;">
-    <img src="./assets/screenshots/android2.jpeg" alt="Setting a new IP address for eva" width="160" style="margin-right:25px; vertical-align:middle;">
-    <img src="./assets/screenshots/android3.jpeg" alt="App when error has ocurred" width="160" style="margin-right:25px; vertical-align:middle;">
+    <img src="./assets/screenshots/android1.jpg" alt="The app is working" width="160" style="vertical-align:middle;">
+    <img src="./assets/screenshots/android2.jpg" alt="Setting a new IP address for eva" width="160" style="margin-right:25px; vertical-align:middle;">
+    <img src="./assets/screenshots/android3.jpg" alt="App when error has ocurred" width="160" style="margin-right:25px; vertical-align:middle;">
 </p>
 
 **Prerequisites**
