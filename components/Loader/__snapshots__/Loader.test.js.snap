@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> have 1 children 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#020202CC",
+      "bottom": 0,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+      "zIndex": 5,
+    }
+  }
+>
+  <ActivityIndicator
+    color="#CFD6FF"
+    size="large"
+  />
+</View>
+`;
+
+exports[`<Loader /> render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#020202CC",
+      "bottom": 0,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+      "zIndex": 5,
+    }
+  }
+>
+  <ActivityIndicator
+    color="#CFD6FF"
+    size="large"
+  />
+</View>
+`;
