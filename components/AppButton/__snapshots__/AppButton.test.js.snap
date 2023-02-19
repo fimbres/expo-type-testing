@@ -29,6 +29,7 @@ exports[`<AppButton /> renders correctly 1`] = `
       false,
     ]
   }
+  testID="app-button"
 >
   <Text
     style={

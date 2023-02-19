@@ -30,6 +30,7 @@ Array [
         false,
       ]
     }
+    testID="app-button"
   >
     <Text
       style={
@@ -85,6 +86,7 @@ Array [
         false,
       ]
     }
+    testID="app-button"
   >
     <Text
       style={
@@ -137,6 +139,7 @@ exports[`<FilterButtons /> render correctly filter different than all 1`] = `
       false,
     ]
   }
+  testID="app-button"
 >
   <Text
     style={

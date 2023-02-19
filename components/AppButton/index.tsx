@@ -11,7 +11,7 @@ interface AppButtonProps {
 
 export const AppButton: FC<AppButtonProps> = ({ title, size = "md", onPress }) => {
   return (
-    <Pressable style={({ pressed }) => [styles.container, styles[size], pressed && styles.pressed]} onPress={onPress}>
+    <Pressable style={({ pressed }) => [styles.container, styles[size], pressed && styles.pressed]} onPress={onPress} testID='app-button'>
         <Text style={[size === "md" ? Styles.textTitleExtraSmall : Styles.textTitleRegular, { color: Colors.white }]}>{title}</Text>
     </Pressable>
   )
