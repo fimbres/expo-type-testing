@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
-import { Entypo } from '@expo/vector-icons';
+// import { Entypo } from '@expo/vector-icons';
 
 import { IProduct } from '../../types'
 import { Colors, Styles } from '../../constants';
@@ -28,7 +28,7 @@ export const ProductCell: FC<ProductCellProps> = ({ product, onPress }) => {
                     <Text style={{ color: is_redemption ? Colors.red : Colors.green }}>{is_redemption ? "-" : "+"}</Text>
                     {getFormattedPoints(points)}
                 </Text>
-                <Entypo name="triangle-right" size={14} color="black" />
+                {/* <Entypo name="triangle-right" size={14} color="black" /> */}
             </View>
         </Pressable>
     )

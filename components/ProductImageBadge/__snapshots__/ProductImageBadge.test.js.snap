@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PointsBadge /> render correctly 1`] = `
+exports[`<ProductImageBadge /> render correctly 1`] = `
 <View
   style={
     Object {

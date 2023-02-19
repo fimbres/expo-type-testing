@@ -108,7 +108,6 @@ exports[`<ProductCell /> renders correctly 1`] = `
       </Text>
       69,814
     </Text>
-    <Text />
   </View>
 </View>
 `;
