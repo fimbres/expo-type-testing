@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import { FontAwesome } from '@expo/vector-icons';
-import * as Font from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
+import { useEffect, useState } from "react";
+import { FontAwesome } from "@expo/vector-icons";
+import * as Font from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 
 export default function useCachedResources() {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
@@ -15,8 +15,8 @@ export default function useCachedResources() {
         // Load fonts
         await Font.loadAsync({
           ...FontAwesome.font,
-          'avenir-black': require('../assets/fonts/AvenirLTStd-Black.otf'),
-          'avenir-book': require('../assets/fonts/AvenirLTStd-Book.otf'),
+          "avenir-black": require("../assets/fonts/AvenirLTStd-Black.otf"),
+          "avenir-book": require("../assets/fonts/AvenirLTStd-Book.otf"),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service

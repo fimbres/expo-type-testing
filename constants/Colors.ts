@@ -17,5 +17,5 @@ export const Colors = {
   blue,
   red,
   green,
-  violet
+  violet,
 };

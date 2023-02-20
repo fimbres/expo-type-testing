@@ -8,4 +8,3 @@ export * from "./ProductsList";
 export * from "./SafeAreaContainer";
 export * from "./ScreenFooter";
 export * from "./ScreenHeader";
- 
