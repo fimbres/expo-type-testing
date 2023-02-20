@@ -3,15 +3,15 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
-import { NavigationContainer } from '@react-navigation/native';
-import * as React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from "@react-navigation/native";
+import * as React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import NotFoundScreen from '../screens/NotFoundScreen';
-import { RootStackParamList } from './types';
-import LinkingConfiguration from './LinkingConfiguration';
-import HomeScreen from '../screens/HomeScreen';
-import ProductScreen from '../screens/ProductScreen';
+import NotFoundScreen from "../screens/NotFoundScreen";
+import { RootStackParamList } from "./types";
+import LinkingConfiguration from "./LinkingConfiguration";
+import HomeScreen from "../screens/HomeScreen";
+import ProductScreen from "../screens/ProductScreen";
 
 export default function Navigation() {
   return (

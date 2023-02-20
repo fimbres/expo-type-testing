@@ -3,8 +3,8 @@
  * https://reactnavigation.org/docs/typescript/
  */
 
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Filter, IProduct } from '../types';
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { Filter, IProduct } from "../types";
 
 declare global {
   namespace ReactNavigation {
@@ -18,12 +18,9 @@ export type RootStackParamList = {
   };
   Product: {
     product: IProduct;
-  }
+  };
   NotFound: undefined;
 };
 
-export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
-  RootStackParamList,
-  Screen
->;
-
+export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
+  NativeStackScreenProps<RootStackParamList, Screen>;
