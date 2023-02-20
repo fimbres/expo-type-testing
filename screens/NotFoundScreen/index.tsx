@@ -1,26 +1,43 @@
-import { FC } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { FC } from "react";
+import { StyleSheet, View } from "react-native";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-import { RootStackParamList } from '../../navigation/types';
-import { AppButton, SafeAreaContainer, ScreenFooter, ScreenHeader } from '../../components';
-import { Colors } from '../../constants';
+import { RootStackParamList } from "../../navigation/types";
+import {
+  AppButton,
+  SafeAreaContainer,
+  ScreenFooter,
+  ScreenHeader,
+} from "../../components";
+import { Colors } from "../../constants";
 
-const NotFoundScreen: FC<NativeStackScreenProps<RootStackParamList, "NotFound">> = ({ navigation }) => {
+const NotFoundScreen: FC<
+  NativeStackScreenProps<RootStackParamList, "NotFound">
+> = ({ navigation }) => {
   return (
     <>
       <SafeAreaContainer style={styles.statusBar} />
       <SafeAreaContainer style={{ paddingTop: 0 }}>
         <View style={styles.container}>
-          <ScreenHeader title='Lo Sentimos!' subtitle='El producto que seleccionaste no existe' style={styles.header} />
+          <ScreenHeader
+            title="Lo Sentimos!"
+            subtitle="El producto que seleccionaste no existe"
+            style={styles.header}
+          />
           <ScreenFooter style={styles.footer}>
-            <AppButton title='Volver a Inicio' size='lg' onPress={() => navigation.navigate("Home", { initialFilter: 'all' })} />
+            <AppButton
+              title="Volver a Inicio"
+              size="lg"
+              onPress={() =>
+                navigation.navigate("Home", { initialFilter: "all" })
+              }
+            />
           </ScreenFooter>
         </View>
       </SafeAreaContainer>
     </>
   );
-}
+};
 
 export default NotFoundScreen;
 
@@ -31,7 +48,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   header: {
     paddingTop: 66,
