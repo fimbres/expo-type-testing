@@ -1,36 +1,40 @@
-import React, { FC } from 'react';
-import { FlatList, StyleSheet, View, Text, Image } from 'react-native';
+import React, { FC } from "react";
+import { FlatList, StyleSheet, View, Text, Image } from "react-native";
 
-import { IProduct } from '../../types';
-import { ProductCell } from './ProductCell';
-import { Colors, Styles } from '../../constants';
+import { IProduct } from "../../types";
+import { ProductCell } from "./ProductCell";
+import { Colors, Styles } from "../../constants";
 import EmptyInvitesImg from "../../assets/images/empty-products.png";
 
 interface ProductsListProps {
-    products: IProduct[];
-    onPress: (id: IProduct) => void;
+  products: IProduct[];
+  onPress: (id: IProduct) => void;
 }
 
 export const ProductsList: FC<ProductsListProps> = ({ products, onPress }) => {
   return (
     <FlatList
-      testID='products-list'
+      testID="products-list"
       style={styles.list}
       showsVerticalScrollIndicator={false}
       data={products}
       ItemSeparatorComponent={() => <View style={{ marginVertical: 4 }} />}
-      renderItem={({ item, index }) => <ProductCell key={index} product={item} onPress={() => onPress(item)} />}
-      ListFooterComponent={() => <View style={{ marginTop: 33 }}/>}
+      renderItem={({ item, index }) => (
+        <ProductCell key={index} product={item} onPress={() => onPress(item)} />
+      )}
+      ListFooterComponent={() => <View style={{ marginTop: 33 }} />}
       ListEmptyComponent={() => (
-        <View style={styles.emptyState} testID='products-list-empty-state'>
+        <View style={styles.emptyState} testID="products-list-empty-state">
           <Image source={EmptyInvitesImg} style={styles.image} />
           <Text style={styles.primaryText}>No hay movimientos registrados</Text>
-          <Text style={styles.secondaryText}>Realiza una compra y vuelve más tarde</Text>
+          <Text style={styles.secondaryText}>
+            Realiza una compra y vuelve más tarde
+          </Text>
         </View>
       )}
     />
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   list: {
@@ -58,4 +62,4 @@ const styles = StyleSheet.create({
     ...Styles.textCaptionSmall,
     color: Colors.gray,
   },
-})
+});

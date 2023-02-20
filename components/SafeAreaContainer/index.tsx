@@ -1,5 +1,11 @@
 import React, { FC, ReactNode } from "react";
-import { SafeAreaView, StyleSheet, StyleProp, ViewStyle, Platform } from "react-native";
+import {
+  SafeAreaView,
+  StyleSheet,
+  StyleProp,
+  ViewStyle,
+  Platform,
+} from "react-native";
 import Constants from "expo-constants";
 
 import { Colors } from "../../constants";
@@ -9,13 +15,12 @@ interface SafeAreaContainerProps {
   children?: ReactNode;
 }
 
-export const SafeAreaContainer: FC<SafeAreaContainerProps> = ({ style, children }) => {
+export const SafeAreaContainer: FC<SafeAreaContainerProps> = ({
+  style,
+  children,
+}) => {
   return (
-    <SafeAreaView
-      style={[styles.container, style]}
-    >
-      {children}
-    </SafeAreaView>
+    <SafeAreaView style={[styles.container, style]}>{children}</SafeAreaView>
   );
 };
 
