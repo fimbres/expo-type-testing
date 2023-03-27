@@ -1,4 +1,4 @@
-# femsa-test
+# expo-type-testing
 
 **Description**
 
@@ -31,10 +31,10 @@ Be sure that you have already installed:
 
 **Instructions**
 
-- run in your git console `git clone https://github.com/fimbres/femsa-test.git`
-- run `cd femsa-test`
+- run in your git console `git clone https://github.com/fimbres/expo-type-testing.git`
+- run `cd expo-type-testing`
 - run  `yarn install` or just `yarn`
 - Open the project with your IDE.
 - run `expo start`
-- scan the QR code using your smartphone. (this should open your Expo Go app with the `eva-gyroscope` running on your smartphone)
+- scan the QR code using your smartphone. (this should open your Expo Go app with the `expo-type-testing` running on your smartphone)
 - if you want to run all the unit tests around the app, run `yarn test`
